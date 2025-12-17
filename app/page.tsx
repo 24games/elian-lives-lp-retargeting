@@ -12,22 +12,19 @@ export default function Home() {
       {/* Seção Hero */}
       <div className="relative w-full" style={{ minHeight: '200vh' }}>
         {/* Background Image - Garantir que apareça completa */}
-        <div 
-          className="fixed inset-0 w-full h-full -z-10"
-          style={{
-            backgroundImage: "url('/images/BG RETARGETING ELIAN.webp')",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center top',
-            backgroundAttachment: 'fixed',
-          }}
-        >
-          {/* Fallback caso a imagem não carregue */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-black" />
+        <div className="fixed inset-0 w-full h-full -z-10 bg-black overflow-hidden">
+          <div className="absolute inset-0 flex items-start justify-center">
+            <img
+              src="/images/BG RETARGETING ELIAN.webp"
+              alt="Background"
+              className="w-full h-auto object-contain max-h-screen"
+              style={{ minHeight: '100vh' }}
+            />
+          </div>
         </div>
 
-        {/* Overlay Gradiente - Mais suave para não esconder a imagem */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" style={{ minHeight: '100vh' }} />
+        {/* Overlay Gradiente - Muito suave para não esconder a imagem */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" style={{ minHeight: '100vh', pointerEvents: 'none' }} />
 
         {/* Conteúdo Principal - Metade superior da tela */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-start px-4 md:px-8 pt-20 md:pt-24">
