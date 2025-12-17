@@ -1,0 +1,57 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { Send } from 'lucide-react'
+
+export default function CTAButton() {
+  const handleClick = () => {
+    // Substitua pela URL do seu grupo Telegram
+    window.open('https://t.me/seu_grupo_vip', '_blank')
+  }
+
+  return (
+    <motion.button
+      onClick={handleClick}
+      className="relative overflow-hidden bg-telegram-blue text-white font-bold uppercase px-8 py-4 md:px-12 md:py-5 rounded-full flex items-center gap-3 text-base md:text-lg shadow-2xl group"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      animate={{
+        scale: [1, 1.02, 1],
+      }}
+      transition={{
+        scale: {
+          repeat: Infinity,
+          duration: 2,
+          ease: "easeInOut",
+        },
+      }}
+    >
+      {/* Efeito Sheen (Laminado) */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%)',
+          width: '200%',
+          height: '200%',
+        }}
+        animate={{
+          x: ['-100%', '100%'],
+          y: ['-100%', '100%'],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: 'linear',
+          repeatDelay: 0,
+        }}
+      />
+      
+      {/* Conteúdo do botão */}
+      <span className="relative z-10 flex items-center gap-3">
+        <Send className="w-5 h-5 md:w-6 md:h-6" />
+        ENTRAR AL GRUPO VIP
+      </span>
+    </motion.button>
+  )
+}
+
