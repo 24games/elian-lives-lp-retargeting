@@ -47,7 +47,7 @@ export default function CTAButton() {
       />
       
       {/* Conteúdo do botão */}
-      <span className="relative z-10 whitespace-nowrap">
+      <span className="relative z-10 whitespace-nowrap uppercase">
         Entrar al grupo de live
       </span>
     </motion.button>
