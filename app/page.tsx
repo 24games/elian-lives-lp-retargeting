@@ -23,10 +23,10 @@ export default function Home() {
         />
 
         {/* Conteúdo Principal - Metade superior da tela */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-start px-4 md:px-8 pt-20 md:pt-24">
-          <div className="max-w-3xl mx-auto text-center space-y-4 md:space-y-5 mt-8 md:mt-12">
+        <div className="relative z-10 h-full flex flex-col items-center justify-start px-4 md:px-8 pt-12 md:pt-16">
+          <div className="max-w-3xl mx-auto text-center space-y-3 md:space-y-4 mt-2 md:mt-4">
             {/* Headline com destaques ciano */}
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-black text-white leading-tight uppercase tracking-tight">
               <span className="relative inline-block px-2 py-1 mx-1 bg-neon-cyan text-black rounded">
                 Revienta
               </span>
@@ -43,7 +43,7 @@ export default function Home() {
             </p>
 
             {/* Botão CTA */}
-            <div className="pt-3 md:pt-4">
+            <div className="pt-2 md:pt-3">
               <CTAButton />
             </div>
           </div>
