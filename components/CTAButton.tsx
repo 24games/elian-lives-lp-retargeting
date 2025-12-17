@@ -12,7 +12,7 @@ export default function CTAButton() {
   return (
     <motion.button
       onClick={handleClick}
-      className="relative overflow-hidden bg-telegram-blue text-white font-bold uppercase px-8 py-4 md:px-12 md:py-5 rounded-full flex items-center gap-3 text-base md:text-lg shadow-2xl group"
+      className="relative overflow-hidden bg-telegram-blue text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-base shadow-2xl group"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       animate={{
@@ -47,9 +47,8 @@ export default function CTAButton() {
       />
       
       {/* Conteúdo do botão */}
-      <span className="relative z-10 flex items-center gap-3">
-        <Send className="w-5 h-5 md:w-6 md:h-6" />
-        ENTRAR AL GRUPO VIP
+      <span className="relative z-10 whitespace-nowrap">
+        Entrar al grupo de live
       </span>
     </motion.button>
   )

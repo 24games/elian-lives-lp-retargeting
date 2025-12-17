@@ -5,43 +5,52 @@ import CTAButton from '@/components/CTAButton'
 
 export default function Home() {
   return (
-    <main className="relative h-screen w-full overflow-hidden">
+    <main className="relative min-h-screen w-full overflow-x-hidden">
       {/* Marquee Header Fixo */}
       <MarqueeHeader />
 
       {/* Seção Hero */}
-      <div className="relative h-full w-full">
-        {/* Background Image */}
+      <div className="relative w-full" style={{ minHeight: '200vh' }}>
+        {/* Background Image - Garantir que apareça completa */}
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="fixed inset-0 w-full h-full -z-10"
           style={{
             backgroundImage: "url('/images/BG RETARGETING ELIAN.webp')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center top',
+            backgroundAttachment: 'fixed',
           }}
         >
           {/* Fallback caso a imagem não carregue */}
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-black" />
         </div>
 
-        {/* Overlay Gradiente */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-transparent" />
+        {/* Overlay Gradiente - Mais suave para não esconder a imagem */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" style={{ minHeight: '100vh' }} />
 
-        {/* Conteúdo Principal */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8 pt-16 md:pt-20">
-          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
-            {/* Headline */}
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Revienta el Casino en Vivo: Multiplica tu plata x4 junto al experto.
+        {/* Conteúdo Principal - Metade superior da tela */}
+        <div className="relative z-10 min-h-screen flex flex-col items-center justify-start px-4 md:px-8 pt-20 md:pt-24">
+          <div className="max-w-3xl mx-auto text-center space-y-4 md:space-y-5 mt-8 md:mt-12">
+            {/* Headline com destaques ciano */}
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
+              <span className="relative inline-block px-2 py-1 mx-1 bg-neon-cyan text-black rounded">
+                Revienta
+              </span>
+              el Casino en Vivo:{' '}
+              <span className="relative inline-block px-2 py-1 mx-1 bg-neon-cyan text-black rounded">
+                Multiplica tu plata x4
+              </span>
+              junto al experto.
             </h1>
 
-            {/* Subheadline */}
-            <p className="text-base md:text-xl lg:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              Deja de jugar solo y empieza a forrarte. Únete a la transmisión y copia mis jugadas ganadoras en tiempo real.
+            {/* Subheadline com negrito */}
+            <p className="text-sm md:text-base lg:text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
+              Deja de jugar solo y <strong className="text-white font-bold">empieza a forrarte</strong>. Únete a la transmisión y copia mis jugadas ganadoras en tiempo real.
             </p>
 
             {/* Botão CTA */}
-            <div className="pt-4 md:pt-6">
+            <div className="pt-3 md:pt-4">
               <CTAButton />
             </div>
           </div>
