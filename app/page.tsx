@@ -23,8 +23,8 @@ export default function Home() {
         />
 
         {/* Conteúdo Principal - Metade superior da tela */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-start px-4 md:px-8 pt-12 md:pt-16">
-          <div className="max-w-3xl mx-auto text-center space-y-3 md:space-y-4 mt-2 md:mt-4">
+        <div className="relative z-10 h-full flex flex-col items-center justify-start px-4 md:px-8" style={{ paddingTop: '15px' }}>
+          <div className="max-w-3xl mx-auto text-center space-y-3 md:space-y-4">
             {/* Headline com destaques ciano */}
             <h1 className="text-xl md:text-2xl lg:text-3xl font-black text-white leading-tight uppercase tracking-tight">
               <span className="relative inline-block px-2 py-1 mx-1 bg-neon-cyan text-black rounded">
