@@ -5,7 +5,7 @@ import CTAButton from '@/components/CTAButton'
 
 export default function Home() {
   return (
-    <main className="relative h-screen w-full overflow-hidden">
+    <main className="relative w-full overflow-hidden" style={{ minHeight: '100vh', height: '100vh' }}>
       {/* Marquee Header Fixo */}
       <MarqueeHeader />
 
@@ -16,10 +16,9 @@ export default function Home() {
           className="absolute inset-0 w-full h-full"
           style={{
             backgroundImage: "url('/images/BG RETARGETING ELIAN.webp')",
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
-            backgroundColor: '#000000',
           }}
         />
 

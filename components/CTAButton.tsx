@@ -12,7 +12,7 @@ export default function CTAButton() {
   return (
     <motion.button
       onClick={handleClick}
-      className="relative overflow-hidden bg-telegram-blue text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-base shadow-2xl group"
+      className="relative overflow-hidden bg-telegram-blue text-white font-bold px-10 py-5 md:px-8 md:py-4 rounded-full text-lg md:text-base shadow-2xl group w-full max-w-xs md:max-w-none md:w-auto"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       animate={{
