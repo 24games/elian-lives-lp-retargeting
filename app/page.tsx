@@ -5,29 +5,26 @@ import CTAButton from '@/components/CTAButton'
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden">
+    <main className="relative h-screen w-full overflow-hidden">
       {/* Marquee Header Fixo */}
       <MarqueeHeader />
 
       {/* Seção Hero */}
-      <div className="relative w-full" style={{ minHeight: '200vh' }}>
-        {/* Background Image - Garantir que apareça completa */}
-        <div className="fixed inset-0 w-full h-full -z-10 bg-black overflow-hidden">
-          <div className="absolute inset-0 flex items-start justify-center">
-            <img
-              src="/images/BG RETARGETING ELIAN.webp"
-              alt="Background"
-              className="w-full h-auto object-contain max-h-screen"
-              style={{ minHeight: '100vh' }}
-            />
-          </div>
-        </div>
-
-        {/* Overlay Gradiente - Muito suave para não esconder a imagem */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" style={{ minHeight: '100vh', pointerEvents: 'none' }} />
+      <div className="relative w-full h-full">
+        {/* Background Image - Imagem fixa completa sem parallax */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: "url('/images/BG RETARGETING ELIAN.webp')",
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center center',
+            backgroundColor: '#000000',
+          }}
+        />
 
         {/* Conteúdo Principal - Metade superior da tela */}
-        <div className="relative z-10 min-h-screen flex flex-col items-center justify-start px-4 md:px-8 pt-20 md:pt-24">
+        <div className="relative z-10 h-full flex flex-col items-center justify-start px-4 md:px-8 pt-20 md:pt-24">
           <div className="max-w-3xl mx-auto text-center space-y-4 md:space-y-5 mt-8 md:mt-12">
             {/* Headline com destaques ciano */}
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
